@@ -1,0 +1,128 @@
+# Aim ex1: 
+#   To solve N- Queens Problem.
+# Algorithm: 
+# Backtracking Algorithm
+# 1) Start in the leftmost column
+# 2) If all queens are placed
+# return true
+# 3) Try all rows in the current column.
+
+#     a) If the queen can be placed safely in this row
+#     then mark this [row, column] as part of the
+#     solution and recursively check if placing
+#     queen here leads to a solution.
+#     b) If placing the queen in [row, column] leads to a solution then return true.
+#     c) If placing queen doesn&#39;t lead to a solution then
+#     unmark this [row, column] (Backtrack) and go to
+#     step (a) to try other rows.
+# 4) If all rows have been tried and nothing worked,
+# return false to trigger backtracking.
+
+exp2:
+ Aim:
+#     To solve and perform graph coloring for vertex coloring.
+# Algorithm:
+#     a)Vertex Coloring:
+
+#     (i)Add a list of colors for graph.
+#     (ii)Then give list of graph edges and nodes 
+#     and create a function to build a graph from 
+#     those edges.
+#     (iii)Add and convert edges to unidirected graph 
+#     (iv)Create a function to assign colors to vertices
+#     of a graph. 
+#     (v)Check for the first free color and assign a color 
+#     to vertex one by one.
+#     (vi)Check colors of adjacent vertices of 'u' and 
+#     store them in a set, after checking assign vertex
+#     'u' the first available color.
+#     (vii)After processing all vertex, print the output.
+
+
+# Aim:
+#     To solve and perform graph coloring for edge coloring.
+# Algorithm:
+# 	b) Edge Coloring:
+
+# 	(i)Define graph by number of vertex and edges connected
+# 	by each other.
+# 	(ii)Create a function to determine edge colors.
+# 	(iii)In that check every edge one by one or traverse
+# 	till they are all visited and more on to next vertex.
+# 	(iv)If color vector is sound to be negative then assign 
+# 	the color and increment the color (i.e change
+# 	the color for next one)
+# 	(v)Copy it in the vector, then add it to the set
+# 	(vi)Keep repeating till all edges of the graph are covered.
+
+exp3
+# Aim:
+#     To implement crypt arithmetic problem of constraint satisfaction problem.
+# Algorithm:
+#     1) First, create a lilst of all the characters that need assigning to pass to solve.
+#     2) Then make sure all the different characters have different number assigned to them. 
+#     3) If the above steps is true then form the equation and append them to the list. 
+
+
+exp4
+# Aim:
+#   To perform BFS using python language.
+
+# Algorithm:
+#   1) Start by putting any one of the graph's vertices at the back of the queue.
+#   2) Now take the graph item of the queue and add it to the visited list.
+#   3) Create a list of that vertex's adjacent nodes. 
+#      Add those which are not within the visited list to the rear of the queue. 
+#   4) Keep continuing step two and three fill the queue is empty. 
+
+# Aim:
+    # To perform DFS using python language
+
+# Algorithm:
+    # 1) We will start by putting any one of the graph's vertex on top of the stack.
+    # 2) After that take the top items of the stack and add it to the visited list 
+    # of the vertex.
+    # 3) Next, create a list of that adjacent node of the vertex. Add the ones which
+    # aren't visited list or vertices to the top of the stack.
+    # 4) Lastly, keep repeating steps 2 and 3 until the stack em empty.
+    
+ exp5
+ # Aim:
+#     To perform Best First Search algorithm in AWS platform.
+# Algorithm:
+#     1) Place the starting node into the open list.
+#     2) If the open list es empty, stop and return failure.
+#     3) Remove the node n, from the open list which has lower value of n(n)
+#     and generate the successors of node n.
+#     4) Check each successor of node n and find whether any node is in good node or not.
+#     5) For each successor node and then check if node has been an either open or closed
+#     list. If the node has not been in both list then add it to open list. 
+#     6) Return to step 2 tell final node has reached.
+
+# Aim:
+#     To implement A* algorithm
+
+# Algorithm:
+#     1) Define list open.
+#     2) If list is empty, return failure and exit.
+#     3)  a) Remove node n with smallest value of f(n) from open and move it to closed list.
+#         b)If the node n is goal state return success and exit. 
+#     4) Expand node n. 
+#     5) Perform same for the successor nodes. 
+#     6) Apply function to the nodes. 
+#     7) Return to step 2. 
+#     8) Exit. 
+
+
+exp6
+ALGORITHM MINIMAX APPROACH :
+Start traversing the given tree in top to bottom manner.
+If node is a leaf node then return the value of the node.
+If isMaximizingPlayer exist then bestVal = -INFINITY
+For each child node, value = minimax(node, depth+1, false, alpha, beta)
+bestVal = max( bestVal, value) and alpha = max( alpha, bestVal)
+If beta <= alpha then stop traversing and return bestVal
+Else, bestVal = +INFINITY
+For each child node, value = minimax(node, depth+1, true, alpha, beta)
+bestVal = min( bestVal, value) and beta = min( beta, bestVal)
+if beta <= alpha the stop traversing and return bestVal
